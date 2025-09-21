@@ -1,16 +1,15 @@
-import altair as alt
-import polars as pl
 import streamlit as st
 
-df = pl.DataFrame({
-    'city': ['Seattle', 'Seattle', 'Seattle', 'New York', 'New York', 'New York', 'Chicago', 'Chicago', 'Chicago'],
-    'month': ['Apr', 'Aug', 'Dec', 'Apr', 'Aug', 'Dec', 'Apr', 'Aug', 'Dec'],
-    'precip': [2.68, 0.87, 5.31, 3.94, 4.13, 3.58, 3.62, 3.98, 2.56]
-})
 
-chart = alt.Chart(df).mark_point().encode(
-    alt.X('precip:N'),
-    alt.Y('city')
+weather = st.Page("weather.py", title="Weather", icon=":material/add_circle:")
+cars = st.Page("cars.py", title="Cars", icon=":material/add_circle:")
+
+pg = st.navigation([weather,cars])
+st.set_page_config(
+    page_title="Altair | xtec.dev",
+    page_icon="𝚾",
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-st.altair_chart(chart)
+pg.run()
