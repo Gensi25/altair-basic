@@ -6,7 +6,7 @@ cars = st.Page("cars.py", title="Cars", icon=":material/add_circle:")
 
 pg = st.navigation([weather,cars])
 st.set_page_config(
-    page_title="Altair | xtec.dev",
+    page_title="Altair | Genís",
     page_icon="𝚾",
     initial_sidebar_state="expanded"
 )
