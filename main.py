@@ -8,7 +8,6 @@ pg = st.navigation([weather,cars])
 st.set_page_config(
     page_title="Altair | xtec.dev",
     page_icon="𝚾",
-    layout="wide",
     initial_sidebar_state="expanded"
 )
 
